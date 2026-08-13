@@ -15,7 +15,7 @@ function calculate() {
   let firstNumber = readline.question("First number: ");
   // validate that the input is a number
   while (invalidNumber(firstNumber)) {
-    prompt("Hmm... that doesn't look like a valid number.");
+    prompt(MESSAGES.en.invalid_input);
     firstNumber = readline.question("First number: ");
   }
   // Ask the user for the second number.
@@ -23,7 +23,7 @@ function calculate() {
   let secondNumber = readline.question("Second number: ");
   // validate that the input is a number
   while (invalidNumber(secondNumber)) {
-    prompt("Hmm... that doesn't look like a valid number.");
+    prompt(MESSAGES.en.invalid_input);
     secondNumber = readline.question("Second number: ");
   }
   // Ask the user for an operation to perform.
@@ -31,7 +31,7 @@ function calculate() {
   let operation = readline.question("Operation (+, -, *, /): ");
   // validate that the input is a valid operation
   while (!['+', '-', '*', '/'].includes(operation)) {
-    prompt("Must choose one of the following operations: +, -, *, / ");
+    prompt(MESSAGES.en.invalid_operator);
     operation = readline.question("Operation (+, -, *, /): ");
   }
   // Perform the operation on the two numbers.
@@ -60,10 +60,10 @@ function calculate() {
 prompt(MESSAGES.en.welcome);
 calculate();
 
-console.log(prompt(MESSAGES.en.another_calculation));
+prompt(MESSAGES.en.another_calculation);
 let answer = readline.question("Answer: ");
 while (answer.toLowerCase() === 'y') {
   calculate();
-  console.log(prompt(MESSAGES.en.another_calculation));
+  prompt(MESSAGES.en.another_calculation);
   answer = readline.question("Answer: ");
 }
