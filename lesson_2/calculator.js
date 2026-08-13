@@ -54,3 +54,8 @@ switch (operation) {
 }
 // Print the result to the terminal.
 console.log(`The result is: ${result}`);
+console.log("Do you want to perform another calculation? (y/n)");
+let answer = readline.question("Answer: ");
+while (answer.toLowerCase() === 'y') {
+  // perform calculation again, extract the calculation logic into a function to avoid code duplication
+}
