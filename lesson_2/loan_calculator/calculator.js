@@ -1,11 +1,15 @@
 const readline = require('readline-sync');
-const { prompt } = require('../helpers');
+const { prompt, getNumberInput } = require('../helpers');
 
 prompt("Welcome to the Loan Calculator!");
 
 function calculateLoan () {
-  const loanAmount = Number(readline.question("Please enter the loan amount: "));
-  const apr = Number(readline.question("Please enter the APR (as a percentage e'g 5 for 5%): "));
+  const loanAmount = Number(getNumberInput(
+    "Please enter the loan amount.", "Loan amount: "
+  ));
+  const apr = Number(getNumberInput(
+    "Please enter the APR (as a percentage e'g 5 for 5%): ", "APR: "
+  ));
   const loanDurationYears = readline.question("Please enter the loan duration in years,months format (e.g 5,0 for 5 years, 3,2 for 3 years and 2 months): ");
   const [years, months] = loanDurationYears.split(',').map(Number);
   const loanDurationMonths = (years * 12) + months;
