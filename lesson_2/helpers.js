@@ -21,5 +21,5 @@ function getNumberInput(promptMessage, numberType) {
 module.exports = {
   prompt,
   invalidNumber,
-  getNumberInput
+  getNumberInput,
 };
