@@ -28,7 +28,6 @@ function getLoanDuration() {
 }
 
 function getAPR() {
-  // check that APR entered is a valid number and greater than or equal to 0
   let apr = readline.question("Please enter the APR (as a percentage e'g 5 for 5%): ");
   while (invalidNumber(apr) || Number(apr) < 0) {
     prompt("Invalid input. Please enter a valid APR (as a percentage e.g 5 for 5%, 0 for 0%): ");
