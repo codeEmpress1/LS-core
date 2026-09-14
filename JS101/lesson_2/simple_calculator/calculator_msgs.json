@@ -1,0 +1,8 @@
+{
+  "en": {
+    "welcome": "Welcome to Calculator!",
+    "invalid_input": "Invalid input. Please enter a valid number.",
+    "invalid_operator": "Invalid operator. Please enter one of the following: +, -,*, /.",
+    "another_calculation": "Do you want to perform another calculation? (y/n)"
+  }
+}
